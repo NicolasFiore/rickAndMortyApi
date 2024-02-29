@@ -17,20 +17,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="28z-51-CUf">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="120" width="393" height="732"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="IzP-6A-mqS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nWv-rR-va6"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="28z-51-CUf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Cw3-Hk-uCZ"/>
+                            <constraint firstItem="IzP-6A-mqS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2Ho-yD-UdK"/>
+                            <constraint firstItem="28z-51-CUf" firstAttribute="top" secondItem="IzP-6A-mqS" secondAttribute="bottom" constant="5" id="e0I-ry-cXn"/>
+                            <constraint firstItem="IzP-6A-mqS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gWz-9l-6fC"/>
                             <constraint firstItem="28z-51-CUf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hdB-bp-zem"/>
                             <constraint firstAttribute="bottom" secondItem="28z-51-CUf" secondAttribute="bottom" id="nQC-ie-qys"/>
                             <constraint firstItem="28z-51-CUf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pQe-da-R79"/>
+                            <constraint firstItem="IzP-6A-mqS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xQb-13-miD"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="barraDeBusqueda" destination="IzP-6A-mqS" id="78M-DG-OhI"/>
                         <outlet property="tableVIew" destination="28z-51-CUf" id="aIJ-Sz-6BZ"/>
                     </connections>
                 </viewController>
